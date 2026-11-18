@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP - Share a Recipe </title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-wrapper">
+<header>
+    <div class="header-inner">
+        <a class="site-logo" href="index.html">
+            <img src="images/Precious pasta logo, BG f3eee5.jpeg"
+                 alt="Precious Pasta — homepage">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="linguine.html">Luscious Linguine</a>
+            <a href="#">About</a>
+            <a href="upload.html" aria-current="page">Upload recipe</a>
+        </nav>
+    </div>
+</header>
+
+    <main class="content-container">
+        <div class="white-card">
+            <h1>Share your recipe</h1>
+            <p>Have a pasta recipe to share? Let us know by filling out the form below.</p>
+
+            <form action="upload.html" method="get">
+                <fieldset>
+                    <legend>About the recipe</legend>
+
+                    <div class="form-field">
+                        <label for="recipe-name">
+                            Recipe name <span aria-hidden="true">*</span>
+                        </label>
+                        <input type="text" id="recipe-name" name="recipe-name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="category">Category</label>
+                            <select id="category" name="category">
+                                <option value="">Choose a category</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                                <option value="snacks">Snacks</option>
+                            </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="time">Time in minutes</label>
+                            <input type="number" id="time" name="time" min="1" inputmode="numeric">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="servings">Number of servings</label>
+                            <input type="number" id="servings" name="servings" min="1" inputmode="numeric">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Difficulty</legend>
+                    <div class="difficulty-options">
+                        <div>
+                            <input type="radio" id="easy" name="difficulty" value="easy">
+                            <label for="easy">Easy</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="medium" name="difficulty" value="medium">
+                            <label for="medium">Medium</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="hard" name="difficulty" value="hard">
+                            <label for="hard">Hard</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Recipe instructions</legend>
+
+                    <div class="form-field">
+                        <label for="ingredients">Ingredients <span aria-hidden="true">*</span></label>
+                        <textarea id="ingredients" name="ingredients" rows="5" required
+                            aria-describedby="ingredients-hint"></textarea>
+                        <small id="ingredients-hint">Enter one ingredient per line.</small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="method">Method <span aria-hidden="true">*</span></label>
+                        <textarea id="method" name="method" rows="7" required
+                            aria-describedby="method-hint"></textarea>
+                        <small id="method-hint">Describe the steps in order.</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>About you</legend>
+
+                    <div class="form-field">
+                        <label for="your-name">Your name</label>
+                        <input type="text" id="your-name" name="your-name" autocomplete="name">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email <span aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email"
+                            required aria-describedby="email-hint">
+                        <small id="email-hint">Enter a valid email address.</small>
+                    </div>
+                </fieldset>
+
+                <p><span aria-hidden="true">*</span> Required fields</p>
+                <button type="submit">Submit recipe</button>
+            </form>
+        </div>
+    </main>
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <a href="index.html">
+                <img src="images/Precious pasta logo, BG f3eee5.jpeg" alt="Precious Pasta homepage">
+            </a>
+            <p class="footer-tagline">Simply delicious pasta</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a class="footer-about" href="#">About</a>
+            <p class="footer-section-title">More pasta</p>
+
+            <ul>
+                <li><a href="#">Breakfast</a></li>
+                <li><a href="#">Lunch</a></li>
+                <li><a href="#">Dinner</a></li>
+                <li><a href="#">Snacks</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="footer-bottom">
+        <p><small>&copy; Precious Pasta</small></p>
+    </div>
+</footer>
+</body>
+</html>
