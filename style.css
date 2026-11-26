@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Hoofdtitels op alle pagina's in contrast rood */
+h1 {
+    color: #8C0000;
+}
+
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
@@ -17,11 +22,12 @@ body {
     min-height: 100vh;
 }
 
+/* === HEADER: ZELFDE BREEDTE ALS CONTENT === */
 .page-wrapper > header {
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 1rem clamp(1rem, 3vw, 2rem);
+    padding-block: 1rem;
     background-color: #f3eee5;
 }
 
@@ -34,6 +40,7 @@ body {
 .header-inner {
     max-width: 1280px;
     margin: 0 auto;
+    padding-inline: clamp(1rem, 4vw, 3.125rem);
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -80,8 +87,36 @@ body {
     max-width: 32rem;
     padding: clamp(1rem, 3vw, 2rem);
     text-align: left;
-    background-color: #f3eee5;
+    background: linear-gradient(
+        135deg,
+        rgba(243, 238, 229, 0.80) 0%,
+        rgba(243, 238, 229, 0.70) 100%
+    );
+    color: #2b1d14;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
 }
+
+/* Paragraphs and list items in the hero use the hero text colour */
+.hero-text p,
+.hero-text li {
+    color: #2b1d14;
+}
+
+/* Hero headings use the navigation red */
+.hero-text h1,
+.hero-text h2,
+.hero-text h3 {
+    color: #A10000;
+}
+
+/* Hero heading links also use the navigation red */
+.hero-text h1 a,
+.hero-text h2 a,
+.hero-text h3 a {
+    color: #A10000;
+}
+
 
 .category-nav {
     display: flex;
@@ -89,11 +124,22 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-block: calc(1.125rem * 1.5);
 }
 
 .category-nav a {
     color: #8C0000;
     font-size: 1.125rem;
+}
+
+/* Category links inside the hero use the warm brown */
+.hero-text .category-nav a {
+    color: #5c3b1e;
+}
+
+.hero-text .category-nav a:hover,
+.hero-text .category-nav a:focus-visible {
+    color: #2b1d14;
 }
 
 /* === RECIPE CARDS HOMEPAGE ===*/
@@ -128,7 +174,37 @@ body {
     width: 80%;
     padding: clamp(0.75rem, 2vw, 1.25rem);
     text-align: left;
-    background-color: #f3eee5;
+    background: linear-gradient(
+        to top,
+        rgba(243, 238, 229, 0.88) 0%,
+        rgba(243, 238, 229, 0.80) 70%,
+        rgba(243, 238, 229, 0.62) 100%
+    );
+    color: #2b1d14;
+    border-radius: 8px;
+}
+
+/* Hero links use the warm brown */
+.hero-text a {
+    color: #5c3b1e;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.hero-text a:hover,
+.hero-text a:focus-visible {
+    color: #2b1d14;
+}
+
+/* Recipe card links keep the original red */
+.recipe-card-text a {
+    color: #8c0000;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.recipe-card-text a:hover {
+    color: #5c0000;
 }
 
 .recipe-card-text h3 {
@@ -247,15 +323,19 @@ input[type="checkbox"] {
 .site-footer {
     background-color: #f3eee5;
 }
-
+/* === FOOTER: ZELFDE BREEDTE ALS CONTENT === */
 .footer-main {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 3.125rem);
     display: flex;
     align-items: stretch;
 }
 
+
 .footer-brand,
 .footer-nav {
-    padding: 1rem clamp(1rem, 3vw, 2rem);
+    padding-block: 1rem;
 }
 
 .footer-brand {
@@ -284,11 +364,13 @@ input[type="checkbox"] {
     margin: 0;
     padding: 0;
 }
-
 .footer-bottom {
-    padding-right: clamp(1rem, 3vw, 2rem);
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 3.125rem);
     text-align: right;
 }
+
 
 /* === RECIPE PAGE === */
 
@@ -411,4 +493,62 @@ input[type="checkbox"] {
 :focus-visible {
     outline: 3px solid #000000;
     outline-offset: 2px;
+}
+
+/* === AFBEELDINGEN: ZELFDE AFGERONDE HOEKEN === */
+img {
+    border-radius: 8px;
+}
+
+/* Logo's uitzonderen: scherpe hoeken behouden */
+.site-logo img,
+.footer-brand img {
+    border-radius: 0;
+}
+
+/* === HOVER EN FOCUS VOOR NAVIGATIE- EN FOOTERLINKS === */
+.page-wrapper > header nav a:hover,
+.page-wrapper > header nav a:focus-visible,
+.category-nav a:hover,
+.category-nav a:focus-visible,
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+    color: #5c0000;
+}
+/* === HEADER OP MOBIEL: LOGO EN NAVIGATIE GECENTREERD === */
+@media (max-width: 700px) {
+    .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .site-logo img {
+        height: 4.5em;
+    }
+
+    .page-wrapper > header nav {
+        text-align: center;
+    }
+
+    .page-wrapper > header nav a {
+        margin-inline: 0.5rem;
+        margin-right: 0;
+    }
+}
+/* === HERO OP MOBIEL: TEKST ONDER DE AFBEELDING === */
+@media (max-width: 700px) {
+    .hero {
+        gap: 1rem;
+    }
+
+    .hero-text {
+        grid-area: 2 / 1;
+        align-self: start;
+        justify-self: stretch;
+        width: 100%;
+        max-width: none;
+        background: #f3eee5;
+        backdrop-filter: none;
+    }
 }
