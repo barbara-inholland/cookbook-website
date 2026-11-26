@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-wrapper">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
         <div class="header-inner">
             <a class="site-logo" href="index.html">
                 <img src="images/Precious pasta logo, BG f3eee5.jpeg"
-                     alt="Precious Pasta">
+                     alt="Precious Pasta, naar homepage">
             </a>
 
             <nav aria-label="Main navigation">
@@ -23,7 +25,7 @@
         </div>
     </header>
 
-    <main class="content-container">
+    <main id="main-content" class="content-container">
         <section class="hero">
             <img src="images/PP-hero.jpeg"
                  alt="Lemon linguine topped with Parmesan and herbs">
@@ -42,7 +44,9 @@
             </nav>
         </section>
 
-        <section class="recipe-grid" aria-label="Featured recipes">
+        <section class="recipe-grid" aria-labelledby="featured-heading">
+            <h2 id="featured-heading" class="visually-hidden">Featured recipes</h2>
+
             <article class="recipe-card">
                 <img src="images/Roasted Tomato Rigatoni.jpeg"
                      alt="A bowl of rigatoni with roasted cherry tomatoes, basil, and Parmesan">
@@ -77,14 +81,14 @@
             <div class="footer-brand">
                 <a href="index.html">
                     <img src="images/Precious pasta logo, BG f3eee5.jpeg"
-                         alt="Precious Pasta">
+                         alt="Precious Pasta, naar homepage">
                 </a>
                 <p class="footer-tagline">Simply delicious pasta</p>
             </div>
 
-            <nav class="footer-nav" aria-label="Footer navigation">
+            <nav class="footer-nav" aria-labelledby="footer-more-title">
                 <a class="footer-about" href="#">About</a>
-                <p class="footer-section-title">More pasta</p>
+                <p class="footer-section-title" id="footer-more-title">More pasta</p>
                 <ul>
                     <li><a href="#">Breakfast</a></li>
                     <li><a href="#">Lunch</a></li>

@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PP - Share a Recipe </title>
+    <title>Share a Recipe - Precious Pasta</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-wrapper">
-<header>
-    <div class="header-inner">
-        <a class="site-logo" href="index.html">
-            <img src="images/Precious pasta logo, BG f3eee5.jpeg"
-                 alt="Precious Pasta — homepage">
-        </a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <nav aria-label="Main navigation">
-            <a href="linguine.html">Luscious Linguine</a>
-            <a href="#">About</a>
-            <a href="upload.html" aria-current="page">Upload recipe</a>
-        </nav>
-    </div>
-</header>
+    <header>
+        <div class="header-inner">
+            <a class="site-logo" href="index.html">
+                <img src="images/Precious pasta logo, BG f3eee5.jpeg"
+                     alt="Precious Pasta — homepage">
+            </a>
 
-    <main class="content-container">
+            <nav aria-label="Main navigation">
+                <a href="linguine.html">Luscious Linguine</a>
+                <a href="#">About</a>
+                <a href="upload.html" aria-current="page">Upload recipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="content-container">
         <div class="white-card">
             <h1>Share your recipe</h1>
             <p>Have a pasta recipe to share? Let us know by filling out the form below.</p>
 
-            <form action="upload.html" method="get">
+            <form action="upload.html" method="post">
                 <fieldset>
                     <legend>About the recipe</legend>
 
@@ -41,13 +43,13 @@
 
                     <div class="form-field">
                         <label for="category">Category</label>
-                            <select id="category" name="category">
-                                <option value="">Choose a category</option>
-                                <option value="breakfast">Breakfast</option>
-                                <option value="lunch">Lunch</option>
-                                <option value="dinner">Dinner</option>
-                                <option value="snacks">Snacks</option>
-                            </select>
+                        <select id="category" name="category">
+                            <option value="">Choose a category</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snacks">Snacks</option>
+                        </select>
                     </div>
 
                     <div class="form-row">
@@ -121,31 +123,30 @@
         </div>
     </main>
 
-<footer class="site-footer">
-    <div class="footer-main">
-        <div class="footer-brand">
-            <a href="index.html">
-                <img src="images/Precious pasta logo, BG f3eee5.jpeg" alt="Precious Pasta homepage">
-            </a>
-            <p class="footer-tagline">Simply delicious pasta</p>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="images/Precious pasta logo, BG f3eee5.jpeg" alt="Precious Pasta, naar homepage">
+                </a>
+                <p class="footer-tagline">Simply delicious pasta</p>
+            </div>
+
+            <nav class="footer-nav" aria-labelledby="footer-more-title">
+                <a class="footer-about" href="#">About</a>
+                <p class="footer-section-title" id="footer-more-title">More pasta</p>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Lunch</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Snacks</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-            <a class="footer-about" href="#">About</a>
-            <p class="footer-section-title">More pasta</p>
-
-            <ul>
-                <li><a href="#">Breakfast</a></li>
-                <li><a href="#">Lunch</a></li>
-                <li><a href="#">Dinner</a></li>
-                <li><a href="#">Snacks</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="footer-bottom">
-        <p><small>&copy; Precious Pasta</small></p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p><small>&copy; Precious Pasta</small></p>
+        </div>
+    </footer>
 </body>
 </html>
