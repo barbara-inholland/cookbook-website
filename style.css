@@ -1,11 +1,11 @@
-/* Selects every element, making the box sizing applicable for all ordinary elements */
+/* SELECTS EVERY ELEMENT, MAKING THE BOX SIZING APPLICABLE FOR ALL ORDINARY ELEMENTS */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Hoofdtitels op alle pagina's in contrast rood */
+/* MAIN TITLES ON ALL PAGES IN CONTRAST RED */
 h1 {
     color: #8C0000;
 }
@@ -22,7 +22,7 @@ body {
     min-height: 100vh;
 }
 
-/* === HEADER: ZELFDE BREEDTE ALS CONTENT === */
+/* === HEADER: SAME WIDTH AS CONTENT === */
 .page-wrapper > header {
     width: 100%;
     max-width: none;
@@ -36,7 +36,7 @@ body {
     color: #A10000;
 }
 
-/* Header: wikkelen op smalle schermen */
+/* HEADER: WRAP ON NARROW SCREENS */
 .header-inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -97,20 +97,20 @@ body {
     backdrop-filter: blur(3px);
 }
 
-/* Paragraphs and list items in the hero use the hero text colour */
+/* PARAGRAPHS AND LIST ITEMS IN THE HERO USE THE HERO TEXT COLOUR */
 .hero-text p,
 .hero-text li {
     color: #2b1d14;
 }
 
-/* Hero headings use the navigation red */
+/* HERO HEADINGS USE THE NAVIGATION RED */
 .hero-text h1,
 .hero-text h2,
 .hero-text h3 {
     color: #A10000;
 }
 
-/* Hero heading links also use the navigation red */
+/* HERO HEADING LINKS ALSO USE THE NAVIGATION RED */
 .hero-text h1 a,
 .hero-text h2 a,
 .hero-text h3 a {
@@ -132,7 +132,7 @@ body {
     font-size: 1.125rem;
 }
 
-/* Category links inside the hero use the warm brown */
+/* CATEGORY LINKS INSIDE THE HERO USE THE WARM BROWN */
 .hero-text .category-nav a {
     color: #5c3b1e;
 }
@@ -142,7 +142,7 @@ body {
     color: #2b1d14;
 }
 
-/* === RECIPE CARDS HOMEPAGE ===*/
+/* === RECIPE CARDS HOMEPAGE === */
 
 .recipe-grid {
     display: grid;
@@ -184,7 +184,7 @@ body {
     border-radius: 8px;
 }
 
-/* Hero links use the warm brown */
+/* HERO LINKS USE THE WARM BROWN */
 .hero-text a {
     color: #5c3b1e;
     text-decoration-thickness: 2px;
@@ -196,7 +196,7 @@ body {
     color: #2b1d14;
 }
 
-/* Recipe card links keep the original red */
+/* RECIPE CARD LINKS KEEP THE ORIGINAL RED */
 .recipe-card-text a {
     color: #8c0000;
     text-decoration-thickness: 2px;
@@ -239,14 +239,14 @@ body {
     background-color: #ffffff;
 }
 
-/* Tekst: relatieve eenheid, zodat de tekstgrootte van de browser werkt */
+/* TEXT: RELATIVE UNIT SO THAT THE BROWSER'S TEXT SIZE WORKS */
 p, li {
     color: #000000;
     font-weight: 400;
     font-size: 1rem;
 }
 
-/* === UPLOAD FORM ===*/
+/* === UPLOAD FORM === */
 fieldset {
     border: 1px solid #A10000;
     padding: clamp(1rem, 3vw, 2rem);
@@ -260,7 +260,7 @@ fieldset {
     min-width: 0;
 }
 
-/* Spacing between fields that are direct children of the fieldset */
+/* SPACING BETWEEN FIELDS THAT ARE DIRECT CHILDREN OF THE FIELDSET */
 fieldset > .form-field + .form-field,
 fieldset > .form-field + .form-row {
     margin-top: 1rem;
@@ -285,13 +285,13 @@ fieldset > .form-field + .form-row {
     font: inherit;
 }
 
-/* Make only the time and servings inputs half-width */
+/* MAKE ONLY THE TIME AND SERVINGS INPUTS HALF-WIDTH */
 .form-row .form-field input {
     width: 50%;
     height: 2.75rem;
 }
 
-/* Radio- en checkboxen: grotere klikvlakken (WCAG 2.5.8) */
+/* RADIO AND CHECKBOXES: LARGER CLICK AREAS (WCAG 2.5.8) */
 input[type="radio"],
 input[type="checkbox"] {
     width: 1.25rem;
@@ -323,7 +323,7 @@ input[type="checkbox"] {
 .site-footer {
     background-color: #f3eee5;
 }
-/* === FOOTER: ZELFDE BREEDTE ALS CONTENT === */
+/* === FOOTER: SAME WIDTH AS CONTENT === */
 .footer-main {
     max-width: 1280px;
     margin-inline: auto;
@@ -476,7 +476,7 @@ input[type="checkbox"] {
     top: 1rem;
 }
 
-/* === VISUALLY HIDDEN (alleen voor schermlezers) === */
+/* === VISUALLY HIDDEN (FOR SCREEN READERS ONLY) === */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -495,18 +495,18 @@ input[type="checkbox"] {
     outline-offset: 2px;
 }
 
-/* === AFBEELDINGEN: ZELFDE AFGERONDE HOEKEN === */
+/* === IMAGES: SAME ROUNDED CORNERS === */
 img {
     border-radius: 8px;
 }
 
-/* Logo's uitzonderen: scherpe hoeken behouden */
+/* LOGOS ARE EXCEPTIONS: KEEP SHARP CORNERS */
 .site-logo img,
 .footer-brand img {
     border-radius: 0;
 }
 
-/* === HOVER EN FOCUS VOOR NAVIGATIE- EN FOOTERLINKS === */
+/* === HOVER AND FOCUS FOR NAVIGATION AND FOOTER LINKS === */
 .page-wrapper > header nav a:hover,
 .page-wrapper > header nav a:focus-visible,
 .category-nav a:hover,
@@ -515,7 +515,7 @@ img {
 .footer-nav a:focus-visible {
     color: #5c0000;
 }
-/* === HEADER OP MOBIEL: LOGO EN NAVIGATIE GECENTREERD === */
+/* === HEADER ON MOBILE: LOGO AND NAVIGATION CENTERED === */
 @media (max-width: 700px) {
     .header-inner {
         flex-direction: column;
@@ -536,7 +536,7 @@ img {
         margin-right: 0;
     }
 }
-/* === HERO OP MOBIEL: TEKST ONDER DE AFBEELDING === */
+/* === HERO ON MOBILE: TEXT BELOW THE IMAGE === */
 @media (max-width: 700px) {
     .hero {
         gap: 1rem;
